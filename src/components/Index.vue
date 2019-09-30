@@ -51,6 +51,61 @@
               </div>
               <p class="btn-name">撒旦法大师傅阿斯蒂芬</p>
           </a>
+            <a class='list-btn'>
+              <div class='cover-cont'>
+                <img src="">
+                <div class='play-count'>
+                  <p class="count-cont">
+                      <span class="icon"></span>215wan
+                  </p>
+                </div>
+              </div>
+              <p class="btn-name">撒旦法大师傅阿斯蒂芬</p>
+          </a>
+            <a class='list-btn'>
+              <div class='cover-cont'>
+                <img src="">
+                <div class='play-count'>
+                  <p class="count-cont">
+                      <span class="icon"></span>215wan
+                  </p>
+                </div>
+              </div>
+              <p class="btn-name">撒旦法大师傅阿斯蒂芬</p>
+          </a>
+            <a class='list-btn'>
+              <div class='cover-cont'>
+                <img src="">
+                <div class='play-count'>
+                  <p class="count-cont">
+                      <span class="icon"></span>215wan
+                  </p>
+                </div>
+              </div>
+              <p class="btn-name">撒旦法大师傅阿斯蒂芬</p>
+          </a>
+            <a class='list-btn'>
+              <div class='cover-cont'>
+                <img src="">
+                <div class='play-count'>
+                  <p class="count-cont">
+                      <span class="icon"></span>215wan
+                  </p>
+                </div>
+              </div>
+              <p class="btn-name">撒旦法大师傅阿斯蒂芬</p>
+          </a>
+            <a class='list-btn'>
+              <div class='cover-cont'>
+                <img src="">
+                <div class='play-count'>
+                  <p class="count-cont">
+                      <span class="icon"></span>215wan
+                  </p>
+                </div>
+              </div>
+              <p class="btn-name">撒旦法大师傅阿斯蒂芬</p>
+          </a>
       </div>
     </div>
   </div>
@@ -78,11 +133,11 @@ export default {
     margin: .4rem auto .3rem;
   }
   .input-cont{
-    width:7rem;
+    width:5.24rem;
     height: .72rem;
     border-radius: .36rem;
     background: #f7f7f7;
-    margin-left: 1.2rem;
+    margin-left: 1rem;
     position: relative;
     float: left;
     .search{
@@ -121,12 +176,14 @@ export default {
     }
   }
   .playing{
-    display: block;
+    display: flex;
     position: relative;
     float: left;
-    width: .7rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: .46rem;
     height: .45rem;
-    margin: .13rem 0 0 .5rem;
+    margin: .1rem 0 0 .2rem;
     i{
       display: block;
       position: absolute;
@@ -263,7 +320,7 @@ export default {
           height: 3.1rem;
           flex: 0 0 auto;
           position: relative;
-          margin: 0 .4rem;
+          // margin: 0 .1rem;
           .cover-cont{
             width: 2.2rem;
             height: 2.2rem;
@@ -275,7 +332,6 @@ export default {
               width: 100%;
               height: 100%;
               background:#364856;
-              
             }
             .play-count{
               width: 100%;
