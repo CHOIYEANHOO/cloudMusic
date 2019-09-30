@@ -21,9 +21,18 @@
       <mt-swipe-item>3</mt-swipe-item>
     </mt-swipe>
     <div class="btn-cont">
-      <a href="javascript:;" class="recommend"></a>
-      <a href="javascript:;" class="song-list"></a>
-      <a href="javascript:;" class="board"></a>
+      <a href="javascript:;" class="recommend">
+        <p class='icon'></p>
+        <p class='text'>每日推荐</p>
+      </a>
+      <a href="javascript:;" class="song-list">
+        <p class='icon'></p>
+        <p class='text'>歌单</p>
+      </a>
+      <a href="javascript:;" class="board">
+        <p class='icon'></p>
+        <p class='text'>排行榜</p>
+      </a>
     </div>
     <div class="recommend-list">
       <div class="recommend-header">
@@ -31,7 +40,17 @@
         <a href="javascript:;" class="list-page">歌单广场</a>
       </div>
       <div class="list-cont">
-
+          <a class='list-btn'>
+              <div class='cover-cont'>
+                <img src="">
+                <div class='play-count'>
+                  <p class="count-cont">
+                      <span class="icon"></span>215wan
+                  </p>
+                </div>
+              </div>
+              <p class="btn-name">撒旦法大师傅阿斯蒂芬</p>
+          </a>
       </div>
     </div>
   </div>
@@ -163,24 +182,48 @@ export default {
     border-bottom: 0.01rem solid #dfdfdf;
     a{
       display: block;
-      width: .93rem;
-      height: .93rem;
+      width: 1.1rem;
+      height: 1.7rem;
+      text-decoration: none;
+      .icon{
+        width:.93rem;
+        height:.93rem;
+        margin:0 auto;
+      }
+      .text{
+        width:100%;
+        height:.76rem;
+        line-height:.76rem;
+        font-size : .24rem;
+        color:#555;
+        text-decoration: none;
+        margin:0;
+      }
     }
     .recommend{
-      background: url('../assets/img/today_btn.png')no-repeat center;
-      background-size: 100% auto;
+      .icon{
+         background: url('../assets/img/today_btn.png')no-repeat center;
+          background-size: 100% auto;
+      }
     }
     .song-list{
+      .icon{
       background: url('../assets/img/song_list.png')no-repeat center;
       background-size: 100% auto;
+      }
+
     }
     .board{
-      background: url('../assets/img/broad_btn.png')no-repeat center;
-      background-size: 100% auto;
+      .icon{
+        background: url('../assets/img/broad_btn.png')no-repeat center;
+        background-size: 100% auto;
+      }
     }
+  }
     .recommend-list{
       width: 95%;
       height: auto;
+      margin:0 auto;
       .recommend-header{
         width: 100%;
         height: 1.15rem;
@@ -196,13 +239,16 @@ export default {
           color: #000;
         }
         .list-page{
-          width: 1.53rem;
-          height: .53rem;
-          border: .01rem solid #888;
+          width: 1.54rem;
+          height: .54rem;
+          border: .015rem solid #cacaca;
+          padding: 0 .1rem;
           border-radius: .27rem;
-          line-height: .53rem;
+          line-height: .54rem;
           text-align: center;
           margin-top: .15rem;
+          color: #222;
+          text-decoration:none;
         }
       }
       .list-cont{
@@ -210,10 +256,72 @@ export default {
         height:  auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        .list-btn{
+          display: block;
+          width: 2.2rem;
+          height: 3.1rem;
+          flex: 0 0 auto;
+          position: relative;
+          margin: 0 .4rem;
+          .cover-cont{
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: .2rem;
+            position: relative;
+            overflow: hidden;
+            img{
+              display: block;
+              width: 100%;
+              height: 100%;
+              background:#364856;
+              
+            }
+            .play-count{
+              width: 100%;
+              height: .36rem;
+              background: #99999902;
+              position: absolute;
+              top: 0;
+              left: 0;
+              .count-cont{
+                position: absolute;
+                top: 0 ;
+                right: 0;
+                height: .36rem;
+                line-height: .36rem;
+                color: #fff;
+                font-size: .22rem;
+                padding-right: .13rem;
+                font-weight: bold;
+                .icon{
+                  display: inline-block;
+                  vertical-align: middle;
+                  width: .19rem;
+                  height: .23rem;
+                  background: url('../assets/img/play_02.png')no-repeat center;
+                  background-size: 100% auto;
+                }
+              }
+            }
+          }
+          .btn-name{
+            width: 100%;
+            height: .6rem;
+            // padding: .rem 0 ;
+            line-height: .3rem;
+            font-size: .22rem;
+            color: #000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-align: left;
+            word-break: break-all;
+          }
+        }
       }
     }
-
-  }
 }
 </style>
