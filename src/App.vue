@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <Index/>
+    <SongList/>
   </div>
 </template>
 
 <script>
-import Index from './components/Index'
+// import Index from './components/Index'
+// import Board from './components/board'
+// import BoardList from './components/boardList'
+// import Index from '@/components/index'
+// import Play from '@/components/play'
+import SongList from '@/components/songList'
 
 export default {
   name: 'App',
   components: {
-    Index
+    SongList
   }
 }
 </script>

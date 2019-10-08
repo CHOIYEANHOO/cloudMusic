@@ -5,6 +5,7 @@ import {Swipe, SwipeItem} from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import 'lib-flexible/flexible.js'
 import App from './App'
+import router from './router'
 
 Vue.config.productionTip = false
 
@@ -14,5 +15,6 @@ Vue.component(SwipeItem.name, SwipeItem)
 new Vue({
   el: '#app',
   components: { App },
-  template: '<App/>'
-})
+  template: '<App/>',
+  router
+}).$mount('#app')

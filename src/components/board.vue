@@ -9,14 +9,13 @@
         <img src="" alt="">
     </div>
     <div class="song-list-cont">
-       
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'search Page',
+  name: 'Board',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

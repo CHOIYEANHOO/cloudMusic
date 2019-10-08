@@ -28,7 +28,7 @@
             <i class="icon"></i>
             <p>播放全部<span>（共{{count}}首）</span></p>
         </div>
-        <div class="song-list">
+        <!-- <div class="song-list">
             <div class='song'>
               <p class="num">{{i}}</p>
               <div class="song-info">
@@ -36,17 +36,18 @@
                 <p class="singer-info">{{item.singerName}} - {{item.listName}}</p>
               </div>
             </div>
-        </div>
+        </div> -->
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'search Page',
+  name: 'SongList',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      count: 10
     }
   }
 }
@@ -59,52 +60,58 @@ export default {
   height: auto;
   .header-cont{
     width: 100%;
-    height: .88rem;
+    height: 0.88rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .back{
-      width: .27rem;
-      height: .88rem;
-      margin-left: .32rem;
+    .back {
+      width: 0.23rem;
+      height: 0.88rem;
+      margin-left: 0.32rem;
+      background: url('../assets/img/back_02.png')no-repeat center;
+      background-size: 100% auto;
     }
-    .title{
+    .title {
       width: auto;
-      height: .88rem;
+      height: 0.88rem;
+      line-height: 0.88rem;
       text-align: center;
       margin: 0 auto;
-      font-size: .36rem;
-      color: #fff;
+      font-size: 0.36rem;
+      color: #000;
+      font-weight: bold;
     }
-    .playing{
-      display: block;
+    .playing {
+      display: flex;
       position: relative;
       float: left;
-      width: .7rem;
-      height: .45rem;
-      margin: .13rem 0 0 .3rem;
-      i{
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 0.46rem;
+      height: 0.45rem;
+      margin: 0.1rem 0.2rem 0 0.2rem;
+      i {
         display: block;
         position: absolute;
         bottom: 0;
-        width: .1rem;
+        width: 0.05rem;
         background: #000;
       }
-      .one{
+      .one {
         left: 0;
-        height: .3rem;
+        height: 0.3rem;
       }
-      .two{
-        left: .2rem;
-        height:.2rem;
+      .two {
+        left: 0.15rem;
+        height: 0.2rem;
       }
-      .three{
-        left: 0.4rem;
-        height: .45rem;
+      .three {
+        left: 0.3rem;
+        height: 0.45rem;
       }
-      .four{
-        left: 0.6rem;
-        height: .1rem;
+      .four {
+        left: 0.45rem;
+        height: 0.1rem;
       }
     }
   }
@@ -156,7 +163,6 @@ export default {
     .list-msg-cont{
       width: 3.65rem;
       height: 1.85rem;
-      
     }
   }
   .song-list-cont {
@@ -177,7 +183,6 @@ export default {
         background: url()no-repeat center;
         background-size: 100% auto;
         margin: 0 .2rem;
-        
       }
       p{
         width: auto;

@@ -3,8 +3,8 @@
     <div class="header-cont">
         <div class="back"></div>
         <div class="song-msg">
-            <p class="song-name"></p>
-            <p class="singer-name"></p>
+            <p class="song-name">afasdfasfas</p>
+            <p class="singer-name">adsfasdf</p>
         </div>
     </div>
     <div class="middle-cont">
@@ -15,12 +15,12 @@
     </div>
     <div class="controll-cont">
         <div class="process-cont">
-            <p class="now"></p>
+            <p class="now">00:00</p>
             <div class="line">
                 <div class="played-line"></div>
                 <div class="circle"></div>
             </div>
-            <p class="total-time"></p>
+            <p class="total-time">03:40</p>
         </div>
         <div class="controll">
             <div class="prev"></div>
@@ -46,23 +46,35 @@ export default {
 <style scoped lang='less'>
 #play{
   width: 100%;
-  height: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #71707350;
   .header-cont{
     width: 100%;
     height: .88rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
     .back{
-      width: .27rem;
-      height: .88rem;
-      margin-left: .32rem;
+      width: 0.23rem;
+      height: 0.88rem;
+      margin-left: 0.32rem;
+      background: url('../assets/img/back.png')no-repeat center;
+      background-size: 100% auto;
+      position: relative;
+
     }
     .song-msg{
-      width: auto;
+      width: 100%;
       height: .88rem;
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
+      position: absolute;
+      left: 0;
+      top: 0;
       .song-name{
         width: auto;
         text-align: center;
@@ -71,7 +83,7 @@ export default {
         color: #fff;
       }
       .singer-name{
-            width: auto;
+        width: auto;
         text-align: center;
         margin: 0 auto;
         font-size: .2rem;
@@ -82,30 +94,38 @@ export default {
   .middle-cont{
       width: 7.5rem;
       height: 8.5rem;
-      position: absolute;
-      top: 50%;
-      margin-top: -5.75rem;
+      // position: absolute;
+      // top: 50%;
+      // margin-top: -5.75rem;
       .gan{
-        width: 2.14rem;
-        height: 3.32rem;
+        width: 3.26rem;
+        height: 2.10rem;
         position: absolute;
         left: 50%;
         margin-left: -0.32rem;
+        background: url('../assets/img/play_gun.png')no-repeat center;
+        background-size: 100% auto;
       }
       .changpian{
-        width: 6.2rem;
-        height:6.2rem;
+        width: 5.72rem;
+        height:5.72rem;
         margin: 0 auto;
         top: 1.7rem;
         position: relative;
+        background: url('../assets/img/disk.png')no-repeat center;
+        background-size: 100% auto;
+        border-radius: 50%;
+        border: 0.24rem solid #00000030;
         img{
           display: block;
           position: absolute;
-          width: 3.8rem;
-          height: 3.8rem;
+          width: 3.82rem;
+          height: 3.82rem;
           top: 50%;
           left: 50%;
-          margin: -1.9rem 0 0 -1.9rem;
+          margin: -1.91rem 0 0 -1.91rem;
+          background: #536672;
+          border-radius: 50%;
         }
       }
     }
@@ -114,13 +134,15 @@ export default {
       // height: .44rem;
       margin:  0 auto;
       position: relative;
+          padding-bottom: .5rem;
       .process-cont{
         width: 100%;
         height: .44rem;
         position: relative;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items:  center;
         .now,.total-time{
           width: auto;
           font-size: .18rem;
@@ -133,7 +155,7 @@ export default {
           height: .06rem;
           background: #536672;
           border-radius: .03rem;
-          overflow: hidden;
+          // overflow: hidden;
           position: relative;
           .played-line{
             width: auto;
@@ -146,12 +168,15 @@ export default {
           .circle{
             width: .16rem;
             height: .44rem;
-            background: url()no-repeat center;
+            background: url('../assets/img/cur_circle.png')no-repeat center;
             background-size: 100% auto;
             position: absolute;
+            top: 50%;
+            margin-top: -0.22rem;
           }
           .touch-bar-circle{
-            background: url()no-repeat center;
+            width: .30rem;
+            background: url('../assets/img/cur_circle.png')no-repeat center;
             background-size: 100% auto;
           }
         }
@@ -165,26 +190,26 @@ export default {
         justify-content: space-between;
         align-items: center;
         .prev{
-          width: .4rem;
-          height: .5rem;
-          background: url()no-repeat center;
+          width: .34rem;
+          height: 1.2rem;
+          background: url('../assets/img/prev_song.png')no-repeat center;
           background-size: 100% auto;
         }
         .next{
-          width: .4rem;
-          height: .5rem;
-          background: url()no-repeat center;
+          width: .34rem;
+          height: 1.2rem;
+          background: url('../assets/img/next_song.png')no-repeat center;
           background-size: 100% auto;
         }
         .pause{
           width: 1.22rem;
           height: 1.22rem;
-          background: url()no-repeat center;
+          background: url('../assets/img/play_btn01.png')no-repeat center;
           background-size: 100% auto;
 
         }
         .play{
-            background: url()no-repeat center;
+            background: url('../assets/img/play_btn01.png')no-repeat center;
             background-size: 100% auto;
         }
       }

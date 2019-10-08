@@ -21,23 +21,23 @@
       <mt-swipe-item>3</mt-swipe-item>
     </mt-swipe>
     <div class="btn-cont">
-      <a href="javascript:;" class="recommend">
+      <router-link to="/Index" class="recommend">
         <p class='icon'></p>
         <p class='text'>每日推荐</p>
-      </a>
-      <a href="javascript:;" class="song-list">
+      </router-link>
+      <router-link to="/SongList" class="song-list">
         <p class='icon'></p>
         <p class='text'>歌单</p>
-      </a>
-      <a href="javascript:;" class="board">
+      </router-link>
+      <router-link to="/BoardList" class="board">
         <p class='icon'></p>
         <p class='text'>排行榜</p>
-      </a>
+      </router-link>
     </div>
     <div class="recommend-list">
       <div class="recommend-header">
         <div class="text">推荐歌单</div>
-        <a href="javascript:;" class="list-page">歌单广场</a>
+        <router-link to="/SongList" class="list-page">歌单广场</router-link>
       </div>
       <div class="list-cont">
           <a class='list-btn'>
@@ -113,7 +113,7 @@
 
 <script>
 export default {
-  name: 'index Page',
+  name: 'Index',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
