@@ -11,29 +11,34 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Board',
-      component: Board
-    },
-    {
-      path: '/',
-      name: 'BoardList',
-      component: BoardList
-    },
-    {
-      path: '/',
+      path: '/Index',
       name: 'Index',
       component: Index
     },
     {
-      path: '/',
+      path: '/Board',
+      name: 'Board',
+      component: Board
+    },
+    {
+      path: '/BoardList',
+      name: 'BoardList',
+      component: BoardList
+    },
+    {
+      path: '/Play',
       name: 'Play',
       component: Play
     },
     {
-      path: '/',
+      path: '/SongList',
       name: 'SongList',
       component: SongList
+    },
+    {
+      path: '/',
+      redirect: '/Index',
+      component: Index
     }
   ]
 })

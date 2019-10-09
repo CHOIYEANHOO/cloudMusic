@@ -1,22 +1,16 @@
 <template>
   <div id="app">
-    <SongList/>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-// import Index from './components/Index'
-// import Board from './components/board'
-// import BoardList from './components/boardList'
-// import Index from '@/components/index'
-// import Play from '@/components/play'
-import SongList from '@/components/songList'
 
 export default {
-  name: 'App',
-  components: {
-    SongList
-  }
+  name: 'App'
+  // components: {
+  //   SongList
+  // }
 }
 </script>
 

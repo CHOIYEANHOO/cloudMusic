@@ -3,7 +3,7 @@
     <div class="search-cont">
       <div class="input-cont">
         <div class="search">
-          <span class="seach-icon"></span>
+          <span class="search-icon"></span>
           <span class="placeholder-text"></span>
         </div>
         <input class="input"  type="text">
@@ -313,6 +313,7 @@ export default {
         height:  auto;
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
         .list-btn{
           display: block;
@@ -350,6 +351,7 @@ export default {
                 font-size: .22rem;
                 padding-right: .13rem;
                 font-weight: bold;
+                margin: .02rem 0;
                 .icon{
                   display: inline-block;
                   vertical-align: middle;

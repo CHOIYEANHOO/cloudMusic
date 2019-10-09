@@ -6,11 +6,13 @@ import 'mint-ui/lib/style.css'
 import 'lib-flexible/flexible.js'
 import App from './App'
 import router from './router'
+import songAxios from './utils/api'
 
 Vue.config.productionTip = false
 
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.prototype.$api = songAxios
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
